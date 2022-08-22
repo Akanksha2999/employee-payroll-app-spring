@@ -5,7 +5,8 @@ public class EmployeePayrollDTO {
     public  long salary;
 
     public EmployeePayrollDTO(String name, long salary) {
-
+        this.name=name;
+        this.salary=salary;
     }
 
     @Override
