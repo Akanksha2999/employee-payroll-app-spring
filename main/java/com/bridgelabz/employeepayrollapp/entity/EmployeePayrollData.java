@@ -2,6 +2,9 @@ package com.bridgelabz.employeepayrollapp.entity;
 
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 
+import javax.persistence.Entity;
+
+@Entity
 public class EmployeePayrollData {
     private  int employeeId;
     private String name;
