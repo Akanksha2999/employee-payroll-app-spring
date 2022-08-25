@@ -26,6 +26,11 @@ public class EmployeePayrollServiceImpl implements EmployeePayrollService{
                         .orElseThrow( () -> new EmployeePayrollException("Employee with employeeId " + empId + " does not exists..!!"));
     }
 
+    @Override
+    public List<EmployeePayrollData> getEmployeesByDepartment(String department) {
+        return employeePayrollRepository.findEmployeesByDepartment(department);
+    }
+
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayrollData employeePayrollData = null;
         employeePayrollData = new EmployeePayrollData(employeePayrollDTO);
